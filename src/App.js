@@ -3,7 +3,6 @@ import Loading from './Loading'
 import Tours from './Tours'
 
 const url = 'https://course-api.com/react-tours-project'
-
 const App = () => {
   const [loading, setLoading] = useState(true)
   const [tours, setTours] = useState([])
@@ -23,16 +22,12 @@ const App = () => {
 
   useEffect(() => {
     fetchTours()
-  }, [])
-
-
-
+  },[])
   return (
     <main>
-      {loading ? <Loading /> : <Tours tours={tours} />}
+      {loading ? <Loading /> : <Tours />}
     </main>
   )
 }
 
 export default App
- 
