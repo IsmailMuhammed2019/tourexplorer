@@ -12,10 +12,9 @@ const App = () => {
     setLoading(true)
     try {
       const res = await fetch(url)
-      const tour = await res.json()
+      const tours = await res.json()
       setLoading(false)
-      setTours(tour)
-      console.log(tour)
+      setTours(tours)
     } catch (error) {
       setLoading(false)
       console.log(error)
